@@ -7,8 +7,6 @@
 //import java.nio.charset.StandardCharsets;
 //
 
-//<input [(ngModel)]="encodeInput" placeholder="Encode your text here!">
-//        <button (click)=encode()>Encode</button>
 //public class Decode {
 //	
 //

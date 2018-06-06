@@ -6,7 +6,7 @@ import { DemoService } from './services/demo.service'
   template: `
     <div>
         <h1>Base64 App</h1>
-        <input [(ngModel)]="encodeInput" placeholder="Encode your text here!">
+        <input [(ngModel)]="codeInput" placeholder="Encode your text here!">
         <button (click)="getEncodeResult()">Encode</button>
         <button (click)="getDecodeResult()">Decode</button>
 
@@ -16,18 +16,18 @@ import { DemoService } from './services/demo.service'
 })
 
 export class EncodeComponent {
-    public encodeInput:String;
-    public EncodeResult:String;
+    public codeInput:String;
+   
 
   constructor(private demoService: DemoService){
   }
     getDecodeResult(){
-     this.demoService.getDecode(this.encodeInput);
+     this.demoService.getDecode(this.codeInput);
      console.log('Decoding.....');
  }
 
     getEncodeResult(){
-     this.demoService.getEncode(this.encodeInput);
+     this.demoService.getEncode(this.codeInput);
      console.log('Encoding.....');
  }
 }
