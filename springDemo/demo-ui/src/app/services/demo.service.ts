@@ -12,7 +12,7 @@ export class DemoService {
   messages="Create by Bojun";
 
   getDecode(stringInput:String){
-    this.http.post<any>('server/api/hash/decode',stringInput).subscribe(res =>{
+    this.http.get<any>('server/api/hash/decode/'+ stringInput).subscribe(res =>{
      this.messages = res.content;
      console.log(this.messages);
 
@@ -20,7 +20,7 @@ export class DemoService {
  }
 
   getEncode(stringInput:String){
-     this.http.post<any>('server/api/hash/encode',stringInput).subscribe(res =>{
+     this.http.get<any>('server/api/hash/encode/'+ stringInput).subscribe(res =>{
       this.messages = res.content;
       console.log(this.messages);
     })
